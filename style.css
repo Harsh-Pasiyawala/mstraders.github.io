@@ -1,0 +1,1195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
+  #section {
+    height: 100%;
+  }
+#section1 {
+    height: 100%;
+  }
+  
+  #section2 {
+    height: 100%;
+  }
+  #section3 {
+    height: 100%;
+  }
+  #section4 {
+    height: 100%;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+nav{
+    display : flex;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    position : relative;
+    justify-content: space-between;
+    text-align: center;
+    padding : 15px 30px;
+    overflow:visible;
+    animation-name: fade;
+    animation-duration: 2s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+}
+nav ol{
+    display:flex;
+    list-style: none;
+    margin: auto 0;
+}
+nav ol li
+{
+    margin: 0 2px;
+}
+nav ol li a
+{
+  color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding : 5px 10px ;
+    transition: all 0.5s;
+}
+nav ol li:hover a{
+    background: #fff ;
+    color:rgb(21, 158, 250) ;
+    
+}
+nav button{
+    display : flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+    
+}
+nav button  
+{
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width :300px;
+
+}
+nav .active{
+    color: #fff;
+    background: rgb(21, 158, 250);
+    border-radius: 60px;
+}
+input[type=text]:focus
+{
+  background-color: rgb(255, 255, 255);
+  outline: none;
+ 
+}
+nav .search_box span{
+    color: rgb(21,158,250) ;
+    font-size: 20px;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor:pointer;
+    z-index: 1;
+    margin-right: 30px;
+}
+nav .search_box span:hover{
+    color: rgb(255, 255, 255);
+    transition: 0.7s;
+} 
+
+nav .search_box span::after{
+    height: 0%;
+    width:0%;
+    content: '';
+    background-color: rgb(21, 158, 250);
+    color: rgb(255, 255, 255);
+    position : absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 100%;
+}
+nav .search_box span:hover::after{
+    width: 100%;
+    height: 100%;
+}
+nav div li{
+    list-style-type:none;
+    margin-top: 10px;
+    border: 2px solid rgb(21, 158, 250);
+    padding-top: 10px;
+    padding-bottom: 9px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+nav div li a
+{
+    color: rgb(21, 158, 250);
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding : 10px 39px 10px 40px;
+    transition: all  0.5s;
+}
+nav div li:hover a{
+    color: #fff ;
+    background-color:rgb(21, 158, 250) ;
+    
+}
+nav .bar{
+    position: relative;
+    margin : auto;
+    display: none;
+}
+nav .bar span{
+    position: absolute;
+    margin-left: 30px;
+    font-size: 25px;
+    color: black;
+}
+nav .bar span:hover{
+    color: rgb(21, 158, 250);
+}
+input[type="checkbox"]
+{
+    -webkit-appearance: none;
+    display: none;
+}
+@media screen and (max-width:1270px) {
+    nav{
+        display: block;
+        padding: 0px;
+    }
+    nav .icon {
+        display : inline-block;
+        padding: 23px 25px;
+        font-size: 35px;
+    }
+    nav img{ 
+
+            width: auto;
+              padding: 15px;
+          
+    }
+    nav .search_box{
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    nav .search_box input{
+        width: 90%;
+    }
+    nav ol{
+        display: flexbox;
+        flex-direction: column;
+        height: 1px;
+        background: rgb(255, 255, 255);
+        visibility: hidden;
+        transition: 1s;
+    }
+    nav li{
+        padding-bottom: 20px;
+    }
+    nav ol li{
+        text-align: center;
+        transition: 00.3s 0.1s all;
+        opacity: 0;
+    }
+
+    nav ol li a{
+        display: block;
+    }
+    nav ol li:nth-child(1)
+    {
+        transform: translateX(-150px);
+    }
+    nav ol li:nth-child(2)
+    {
+        transform: translateX(-200px);
+    }
+    nav ol li:nth-child(3)
+    {
+        transform: translateX(-250px);
+    }
+    nav ol li:nth-child(4)
+    {
+        transform: translateX(-300px);
+    }
+    nav ol li:nth-child(5)
+    {
+        transform: translateX(-350px);
+    }
+    nav .bar
+    {
+        display: block;
+        position :absolute;
+        top: 20px;
+        right: 80px;
+        cursor: pointer;
+    }
+    nav .bar #times{
+        display: none;
+    }
+    #check:checked ~ nav .bar #times{
+        display: block;
+    
+    }
+    #check:checked ~ nav .bar #bars{
+        display: none;
+    }
+    #check:checked ~ nav ol{
+        visibility: visible;
+        height: 305px;
+        transition: 00.5s;
+        background-color: rgb(255, 255, 255);
+    }
+    #check:checked ~ nav ol li:nth-child(1),
+    #check:checked ~ nav ol li:nth-child(2),
+    #check:checked ~ nav ol li:nth-child(3),
+    #check:checked ~ nav ol li:nth-child(4),
+    #check:checked ~ nav ol li:nth-child(5){
+        transform: translateX(0);
+        opacity: 1;
+        transition: 1s;
+    }
+    nav ol::after{
+        transition: 1s 1s all;
+    }
+}
+.slider{
+    position: relative;
+    width :100%;
+}
+.myslider{
+    height: 655px;
+    display: none;
+    overflow: hidden;
+}
+.prev,.next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor:pointer;
+    color: #fff;
+    transition: 0.1s;
+    user-select: none;
+}
+.next:hover
+{
+    color: rgb(21, 158, 250);
+    transition: 0.5s;
+}
+.prev:hover
+{
+    color: rgb(21, 158, 250);
+    transition: 0.5s;
+}
+.next{
+    right: 0;
+}
+.dotsbox{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    cursor: pointer;
+}
+.dot{
+    display:inline-block;
+    width: 15px;
+    height: 15px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.active, .dot:hover{
+    border-color: rgb(21, 158, 250);
+    transition: all 0.5s;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@-webkit-keyframes fade{
+    from {opacity: 0.0;}
+    to { opacity: 1;}
+}
+
+@keyframes fade{
+    from {opacity: 0.0;}
+    to { opacity: 1;}
+}
+.txt{
+    
+    font-size: 30px;
+    position: absolute;
+    letter-spacing: 2px;
+    line-height: 70px;
+    color: rgb(255, 255, 255);
+    top:39%;
+    left: 10%;
+    -WEBKIT-animation-name: posi;
+    -WEBKIT-animation-duration: 2.5s;
+    animation-name: posi;
+    animation-duration: 2.5s;
+    z-index: 1;
+}
+@-webkit-keyframes posi{
+    from{left: 45%;
+         line-height: 15px;}
+    to{left: 10%;line-height: 70px;}
+}
+@keyframes posi{
+    from{left: 45%;line-height: 15px;}
+    to{left: 10%;line-height: 70px;}
+}
+.txt h1{
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.txt h1:hover{
+    color:rgb(21, 158, 250) ;
+    
+}
+.txt p{
+    font-weight:bold;
+    font-size: 20px;
+}
+.txt p:hover{
+    color:rgb(21, 158, 250) ;
+    transition: all 0.5s;
+}
+.slider img{
+    transform: scale(1.5,1.5);
+    animation-name:zoomin;
+    animation-duration: 350s;
+    -webkit-animation-name:zoomin;
+    -webkit-animation-duration: 80s;
+}
+@keyframes zoomin{
+    from{transform:scale(1,1);}
+    to{transform:scale(1.5,1.5);}
+}
+@-webkit-keyframes zoomin{
+    from{transform:scale(1,1);}
+    to{transform:scale(2.5,2.5);}
+}
+@media screen and (max-width: 1250px)
+{
+    .myslider{
+        height: 500px;
+    }
+    .txt{
+        line-height: 60px;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-animation-name: posi2;
+        -webkit-animation-duration: 2.5s;
+        animation-name: posi2;
+        animation-duration: 2.5s;
+    }
+    @-webkit-keyframes posi2{
+        from{top: 25%;}
+        to{top: 50%;}
+    }
+    @keyframes posi2{
+        from{top: 25%;}
+        to{top: 50%;}
+    }
+    .txt h1{
+        font-size: 40px;
+    }
+    .txt p{
+        font-size: 20px;
+    }
+   
+
+}
+@media screen and (max-width: 520px)
+{   .txt{
+    line-height: 47px;
+}
+    .txt h1{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 340px){
+    .txt{
+        line-height: 35px;
+    }
+    .txt h1{
+        font-size: 32px;
+        letter-spacing: 2px;
+
+    }
+    .txt p{
+        font-size: 15px;
+    }
+   
+}
+ .counter .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    
+  }
+  .counter .row{
+      margin: 55px;
+
+  }
+  /* Clear floats after the columns */
+  .counter .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .counter .column img{
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+    
+  }
+  .counter .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  @keyframes countimg{
+      from{transform: scale(0,0);}
+      to{transform: scale(1,1);}
+  }
+.counter .column h2 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(21, 158, 250);
+    margin-top: 20px;
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+}
+.counter .column p {
+    text-align: center;
+    color: black;
+    margin-top: 10px;
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+
+}
+@media screen and (max-width:1250px){
+    .counter .column{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width:450px){
+    .counter .column p{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .counter .column h2{
+    font-size: 20px;
+    letter-spacing: 1px;
+    }
+    }
+.aboutus p{
+    
+    text-align: center;
+    text-decoration: underline solid rgb(21, 158, 250);
+    font-size: 45px;
+    font-weight: bold;
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+}
+
+.aboutus .column {
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: auto; /* Should be removed. Only for demonstration */
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s;
+  }
+  .aboutus .row{
+    overflow: hidden;
+    margin: 55px;
+     
+
+  }
+  /* Clear floats after the columns */
+  .aboutus.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .aboutus h3{
+      margin: 20px;
+      font-size: 22px;
+      letter-spacing: 2px;
+      font-weight: 150;
+  }
+  .aboutus img{
+      margin: 20px;
+      
+  }
+  @media screen and (max-width:1250px){
+    .aboutus .column{
+        width: 100%;
+        margin: 0;
+    }
+    .aboutus h3{
+        font-size: 24px;
+        letter-spacing: 2px;
+
+    }
+    .aboutus .textimg img{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .aboutus{
+        margin: 0;
+    }
+} 
+
+
+@media screen and (max-width:600px){
+    .aboutus h3{
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+}
+@media screen and (max-width:450px){
+    .aboutus h3{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}
+
+.abtusinfo .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+  }
+
+  /* Clear floats after the columns */
+  .abtusinfo .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .abtusinfo .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 1250px) {
+    .abtusinfo .column {
+      width: 100%;
+    }
+  }
+  .abtusinfo .column h1 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(21, 158, 250);
+    margin-top: 20px;
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+}
+.abtusinfo .column h2 {
+    text-align: center;
+    color: black;
+    margin-top: 10px;
+    font-size: 40px;
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+
+}
+@media screen and (max-width:450px){
+    .aboutus .column h1{
+        font-size: 30px;
+    }
+    .aboutus .column h2{
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+}
+
+.aboutus .parallax{
+    background:url(images/par1e.jpeg) no-repeat center ;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 450px;
+    image-resolution: 100%;
+    animation-name: fade;
+    animation-duration: 1s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s; 
+}
+.products{
+    position: relative;
+    margin: 0;
+    display: block;
+    animation-name: fade;
+    animation-duration: 1s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s; 
+}
+.products .somecontent p{
+    text-align: center;
+    margin: 30px 200px 30px 200px;
+    letter-spacing: 2px;
+}
+@media screen and (max-width:750px){
+    .products .somecontent p{
+        margin: 30px 50px 30px 50px;
+        font-size: 15px;
+    }
+}
+.products hr{
+    height: 10px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 350px;
+    margin-right: 350px;
+    opacity: 1;
+}
+@media screen and (max-width:1080px){
+    .products .productlist .row .column{
+        width: 50%;
+        margin-top: 50px;
+        height: auto;
+    }
+}
+@media screen and (max-width:700px){
+    .products .productlist .row .column{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+.products .productlist .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    
+  }
+  .products .productlist .row{
+      margin: 55px;
+      margin-bottom: 200px;
+
+  }
+  /* Clear floats after the columns */
+  .products .productlist .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .products .productstitle{
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    text-decoration: underline solid rgb(21, 158, 250);
+    padding-top: 30px;
+    padding-bottom:  20px;
+    background-color: white;
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+  }
+  .products .productsearch{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    line-height: 35px;
+  }
+  .products .productsearch input{
+      width: 450px;
+      height: 100%;
+      border: none;
+      border-bottom: 3px solid black;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-align: center;
+      transition: all 0.5s;
+  }
+  @media screen and (max-width:510px){
+    .products .productsearch input{
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+ .products .productsearch input[type=text]:focus
+{
+  background-color: rgb(255, 255, 255);
+  border-bottom: 3px solid rgb(21, 158, 250);
+  
+ 
+}
+  .products ul{
+      list-style: none;
+      text-align: center;
+
+}
+  .products .productlist ul li a{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    max-width: 30%;
+    line-height: 38px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 200;
+    transition: all 0.5s;
+  } 
+  .products .productlist ul li:hover a{
+    background: #fff ;
+    color:rgb(21, 158, 250) ;
+    
+    max-width: 200px;
+}
+.contactus-title p{
+    
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    text-decoration: underline solid rgb(21, 158, 250);
+    padding-top: 30px;
+    padding-bottom:  20px;
+    background-color: white;
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+}
+
+.contactus{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: white;
+    animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+}
+
+.contactus .contact-form{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    margin: 30px 0;
+    box-shadow: -1px 1px 10px 10px rgba(0, 0, 0, 0.2);
+}
+ .contactus .contact-form > *{
+     width: 50%;
+ }
+ .contactus .contact-form .first-container{
+    background: linear-gradient(45deg,rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url("images/bg1.jpeg") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .contactus .contact-form .first-container .info-container div
+{
+    margin: 24px 0;
+}
+.contactus .contact-form .first-container .info-container div h3{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-bottom: 10px;
+}
+.contactus .contact-form .first-container .info-container div p{
+    font-size: 16px ;
+    line-height: 1.6;
+    color: rgb(21, 158, 250);
+}
+.contactus .contact-form .first-container .info-container div:first-of-type p{
+    max-width: 260px;
+    color: rgb(21,158,250);
+}
+.contactus .contact-form .second-container{
+    padding: 30px;
+}
+.contactus .contact-form .second-container form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-form .second-container h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contactus .contact-form .second-container form .form-group{
+    margin-bottom: 10px;
+}
+.contactus .contact-form .second-container form .form-group *{
+    min-height: 55px;
+    border: 1px solid #e6e6e6;
+    padding: 0 20px;
+}
+.contactus .contact-form .second-container form .form-group label{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #333;
+    margin-top: -1px;
+}
+.contactus .contact-form .second-container form .form-group:first-of-type input{
+    width: 50.1%;
+    margin-right: -5px;
+}
+.contactus .contact-form .second-container form .form-group input{
+    width: 100%;
+    font-size: 15px;
+    margin-top: -2px;
+}
+.contactus .contact-form .second-container form .form-group input::placeholder,
+.contactus .contact-form .second-container form .form-group textarea::placeholder{
+    color: #999;
+}
+.contactus .contact-form .second-container form .form-group textarea{
+    width: 100%;
+    min-height: 80px;
+    resize: none;
+    padding: 10px 20px;
+    margin-top: -1px;  
+}
+.contactus .contact-form .second-container form button{
+    width: 200px;
+    height: 50px;
+    background: rgb(21, 158, 250);
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid rgb(21, 158, 250);
+    position: relative;
+    left: calc(50% - 100px);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.contactus .contact-form .second-container form button:hover{
+    background: white;
+    color: rgb(21, 158, 250);
+    
+}
+@media screen and (max-width: 800px){
+    .contactus .contact-form{
+        width: 90vw;
+    }
+
+}
+@media screen and (max-width: 700px){
+    .contactus .contact-form{
+        flex-direction: column-reverse;
+    }
+    .contactus .contact-form > *{
+        width: 100%;
+    }
+    .contact-form .first-container{
+        padding: 40px 0;
+    }
+    .contactus{
+        height: auto;
+    }
+}
+.alert-warning
+{   color:#8a6d3b;
+    background-color:#fcf8e3;
+    border-color:#faebcc;
+    border-left: 3px solid #8a6d3b;
+}
+.alert{
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:4px;
+}
+.products .description button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 10px 30px 10px 30px;
+    text-transform: capitalize;
+    border: 2px solid rgb(21, 158, 250);
+    color: rgb(21, 158, 250);
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-bottom: 70px;
+    transition: all 0.5s;
+}
+
+.products .description button:hover{
+    
+    color: rgb(255, 255, 255);
+    background-color: rgb(21, 158, 250);
+}
+#section3 .parallax{
+    background:url(images/PARALLAX2.jpg) no-repeat center ;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 450px;
+    image-resolution: 100%;
+    animation-name: fade;
+    animation-duration: 1s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s; 
+}
+.hrs hr{
+    margin-top: -4px;
+    border: 5px solid rgb(21, 158, 250);
+
+}
+footer{
+
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: white;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: -5px;
+}
+
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  rgb(21, 158, 250);
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: auto;
+}
+
+.footer-distributed h3 span{
+	color:  rgb(21, 158, 250);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  black;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+    transition: all 0.5s;
+}
+.footer-distributed .footer-links a:hover{
+    color: rgb(21, 158, 250);
+}
+
+.footer-distributed .footer-company-name{
+	color:  rgb(21, 158, 250);
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #ffffff;
+	color: black;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+    transition: 0.5s all;
+}
+.footer-distributed .footer-center i:hover{
+    color: rgb(21, 158, 250);
+}
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: rgb(21, 158, 250);
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  rgb(21, 158, 250);
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  rgb(21, 158, 250);
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  black;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  white;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color:rgb(88, 88, 88);
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}

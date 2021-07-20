@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"  type="image/png" href="images/favinew1.png"height="9px">
+  <title>MS Traders - Sign Up or Login</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@451&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9328315230719152"
+     crossorigin="anonymous"></script>
+     <script data-ad-client="ca-pub-9328315230719152" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+nav{
+    display : flex;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    position : relative;
+    justify-content: space-between;
+    text-align: center;
+    padding : 15px 30px;
+    overflow:visible;
+    animation-name: fade;
+    animation-duration: 2s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+}
+@keyframes fade{
+    from {opacity: 0.0;}
+    to { opacity: 1;}
+}
+nav ol{
+    display:flex;
+    list-style: none;
+    margin: auto 0;
+}
+nav ol li
+{
+    margin: 0 2px;
+}
+nav ol li a
+{
+  color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding : 5px 10px ;
+}
+nav ol li:hover a{
+    background: #fff ;
+    color:rgb(21, 158, 250) ;
+    transition: 0.5s;
+
+}
+nav .search_box{
+    display : flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+    
+}
+nav .search_box input  
+{
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width :300px;
+
+}
+nav .active{
+    color: #fff;
+    background: rgb(21, 158, 250);
+    border-radius: 60px;
+}
+input[type=text]:focus
+{
+  background-color: rgb(255, 255, 255);
+  outline: none;
+ 
+}
+
+nav .bar{
+    position: relative;
+    margin : auto;
+    display: none;
+}
+nav .bar span{
+  position: absolute;
+    margin-left: 30px;
+    font-size: 25px;
+    color: black;
+}
+nav .bar span:hover{
+    color: rgb(21, 158, 250);
+}
+input[type="checkbox"]
+{
+    -webkit-appearance: none;
+    display: none;
+}
+@media screen and (max-width:1250px) {
+    nav{
+        display: block;
+        padding: 0px;
+    }
+    nav .icon {
+        display : inline-block;
+        padding: 23px 25px;
+        font-size: 35px;
+    }
+    nav img{
+        padding-left: 0px;
+        padding-top: 15px ;
+        height: 70px;
+        width: 275px;
+    }
+
+    nav ol{
+        display: flex;
+        flex-direction: column;
+        height: 1px;
+        background: rgb(255, 255, 255);
+        visibility: hidden;
+        transition: 1s;
+    }
+    nav li{
+        padding-bottom: 20px;
+    }
+    nav ol li{
+        text-align: center;
+        transition: 00.3s 0.1s all;
+        opacity: 0;
+    }
+
+    nav ol li a{
+        display: block;
+    }
+    nav ol li:nth-child(1)
+    {
+        transform: translateX(-150px);
+    }
+    nav ol li:nth-child(2)
+    {
+        transform: translateX(-200px);
+    }
+    nav ol li:nth-child(3)
+    {
+        transform: translateX(-250px);
+    }
+    nav ol li:nth-child(4)
+    {
+        transform: translateX(-300px);
+    }
+    nav ol li:nth-child(5)
+    {
+        transform: translateX(-350px);
+    }
+    nav .bar
+    {
+        display: block;
+        position :absolute;
+        top: 20px;
+        right: 80px;
+        cursor: pointer;
+    }
+    nav .bar #times{
+        display: none;
+    }
+    #check:checked ~ nav .bar #times{
+        display: block;
+    
+    }
+    #check:checked ~ nav .bar #bars{
+        display: none;
+    }
+    #check:checked ~ nav ol{
+        visibility: visible;
+        height: 305px;
+        transition: 00.5s;
+        background-color: rgb(255, 255, 255);
+    }
+    #check:checked ~ nav ol li:nth-child(1),
+    #check:checked ~ nav ol li:nth-child(2),
+    #check:checked ~ nav ol li:nth-child(3),
+    #check:checked ~ nav ol li:nth-child(4),
+    #check:checked ~ nav ol li:nth-child(5){
+        transform: translateX(0);
+        opacity: 1;
+        transition: 1s;
+    }
+    nav ol::after{
+        transition: 1s 1s all;
+    }
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  border-radius:13px ;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+
+  background-color: rgb(21, 158, 250);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  margin-left: 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 48%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  margin-right: 280px;
+  margin-left: 280px;
+  margin-bottom: 70px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.ani{
+animation-name: countimg;
+    animation-duration: 1s;
+    -webkit-animation-name: countimg;
+    -webkit-animation-duration: 1s; 
+  }
+  .warning{
+    color:red;
+  }
+  @keyframes countimg{
+      from{transform: scale(0,0);}
+      to{transform: scale(1,1);}
+  }
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 1250px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+     margin: 0;
+    margin-top: 10px;
+  }
+  nav ol {
+    padding: 0px;
+  }
+  nav img{
+    height: 10px;
+    width: auto;
+      padding: 15px;
+  }
+  .container{
+      margin-left: 0px;
+      margin-right: 0px;
+
+  }
+}
+</style>
+<body>
+
+
+    <input type="checkbox" id="check">
+  <nav>
+    <img src="images/logonew1.png" alt="MS Traders" href="#section" style="height: 75px;  padding-left: 40px; padding-bottom:10px; margin-top: 0px;">
+    <div class="search_box">
+
+    </div>
+      <ol>
+        <li><a href="index.html #section1"> Home </a></li>
+        <li><a href="index.html #section2"> About us </a></li>
+        <li><a href="index.html #section3"> Products </a></li>
+        <li><a href="index.html #section4"> Contact us </a></li>
+        <li><a href="signup.html" class=active> Sign up </a></li>
+      </ol>
+      <label for="check" class="bar">
+        <span class="fa fa-bars" id="bars"></span>
+        <span class="fa fa-times" id="times"></span>
+      </label>
+  </nav>
+  <div class="ani">
+  <form action="/action_page.php" style="border:1px solid #ccc"></form>
+  <div class="container">
+    <h1 style="margin-top:45px;margin-bottom:45px; text-align: center;color: rgb(21, 158, 250);">Sign Up</h1>
+    <p class="warning">*Due to some problems you won't be able to Signup</p>
+    <p>To create a account you have to fill the following details</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required="required">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required="required">
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required="required">
+    <label>
+           <input type="radio" checked="unchecked" name="remember" height="10px"margin-bottom="15px"> Remember me
+      </label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+</div>
+
+</body>
+</html>
